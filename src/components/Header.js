@@ -1,10 +1,27 @@
 
-const Header = () => {
+const Header = ({ isDarkMode, onToggleDarkMode }) => {
+    const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode"
+
     return (
-        <div className="temporary">
-            <img className="tempImg" src="../images/weebLogo.png"></img>
-            <h3>Evolving Anime & Manga Database</h3>
-        </div>
+        <header>
+            <nav>
+                <div className="navigation">
+    
+                    <img className="siteLogo" src="../images/weebLogo.png"></img>
+                    
+                    <a className="button" href="">
+                        Search Database
+                    </a>
+                    <a className="button" href="">
+                        Add to Database
+                    </a>
+                    <a className="button" href="">
+                        Waifu Generator
+                    </a>
+                    <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
+                </div>
+            </nav>
+        </header>
     );
 };
 

@@ -19,13 +19,11 @@ const HomeContainer = () => {
 
     axios.all([getWaifuData, getJikanData]).then(
         axios.spread((...allData) => {
-            const allWaifuData = allData[0].data.url;
+            const allWaifuData = allData[0].data;
             const allJikanData = allData[1].data.data;
 
             setWaifuData(allWaifuData)
             setJikanData(allJikanData)
-
-            console.log(allData)
         })
     )
   }
@@ -48,12 +46,10 @@ const HomeContainer = () => {
 //     })
 //   }, [])
 
-
     return ( 
         <div className="temporary">
-            <img className="tempImg" src={waifuData}></img>
-            <JikanHome />
-            <WaifuHome />
+            <JikanHome jikanData={jikanData}/>
+            <WaifuHome waifuData={waifuData} />
         </div>
     );
 };

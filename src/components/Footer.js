@@ -1,9 +1,18 @@
 
 const Footer = () => {
     return (
-        <div className="temporary">
-            <h1>Footer Goes Here</h1>
-        </div>
+        <footer>
+            <nav>
+                <div className="navigation">
+                    <a className="button" href="https://jikan.moe/">
+                        Jikan API
+                    </a>
+                    <a className="button" href="https://www.waifu.im/">
+                        WAIFU.IM
+                    </a>
+                </div>
+            </nav>
+        </footer>
     );
 };
 

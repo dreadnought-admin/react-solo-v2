@@ -1,9 +1,9 @@
 import WaifuContainer from "./WaifuContainer"
 
-const WaifuHome = () => {
+const WaifuHome = ({ waifuData }) => {
     return (
         <div className="temporary">
-            <WaifuContainer />
+            <WaifuContainer waifuData={waifuData}/>
         </div>
     );
 };

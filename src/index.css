@@ -16,3 +16,8 @@ code {
  max-width: 200px;
  max-height: 200px; 
 }
+
+.siteLogo {
+  max-width: 400px;
+  max-height: 300px;
+}
