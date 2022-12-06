@@ -24,18 +24,35 @@ const HomeContainer = () => {
 
             setWaifuData(allWaifuData)
             setJikanData(allJikanData)
+
+            console.log(allData)
         })
     )
   }
 
   useEffect(() => {
-    fetchData()
+    fetchData();
   }, [])
+
+  console.log({jikanData})
+  console.log({waifuData})
+
+  useEffect(() => {
+    fetch("http://localhost:3000/anime", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({waifuData, jikanData})
+    })
+  }, [])
+
 
   
     return ( 
         <div className="temporary">
-            <img src={waifuData}></img>
+            <img className="tempImg" src={waifuData}></img>
             <JikanHome />
             <WaifuHome />
         </div>
