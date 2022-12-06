@@ -2,7 +2,7 @@
 const Header = () => {
     return (
         <div className="temporary">
-            <h1>Weeb Trash</h1>
+            <img className="tempImg" src="../images/weebLogo.png"></img>
             <h3>Evolving Anime & Manga Database</h3>
         </div>
     );

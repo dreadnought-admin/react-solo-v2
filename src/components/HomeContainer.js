@@ -20,7 +20,7 @@ const HomeContainer = () => {
     axios.all([getWaifuData, getJikanData]).then(
         axios.spread((...allData) => {
             const allWaifuData = allData[0].data.url;
-            const allJikanData = allData[1]
+            const allJikanData = allData[1].data.data;
 
             setWaifuData(allWaifuData)
             setJikanData(allJikanData)
@@ -37,19 +37,18 @@ const HomeContainer = () => {
   console.log({jikanData})
   console.log({waifuData})
 
-  useEffect(() => {
-    fetch("http://localhost:3000/anime", {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({waifuData, jikanData})
-    })
-  }, [])
+//   useEffect(() => {
+//     fetch("http://localhost:3000/anime", {
+//     method: "POST",
+//     mode: "no-cors",
+//     headers: {
+//         "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({waifuData, jikanData})
+//     })
+//   }, [])
 
 
-  
     return ( 
         <div className="temporary">
             <img className="tempImg" src={waifuData}></img>
