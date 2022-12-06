@@ -10,13 +10,13 @@ const Header = ({ isDarkMode, onToggleDarkMode }) => {
                     <img className="siteLogo" src="../images/weebLogo.png"></img>
                     
                     <a className="button" href="">
-                        Search Database
+                        Search Database 🔍
                     </a>
                     <a className="button" href="">
-                        Add to Database
+                        Add to Database 🖉
                     </a>
                     <a className="button" href="">
-                        Waifu Generator
+                        Waifu Generator 💖
                     </a>
                     <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
                 </div>

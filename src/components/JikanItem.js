@@ -1,25 +1,24 @@
+import { useState } from 'react';
 
-const JikanItem = () => {
+
+const JikanItem = ({ jikan }) => {
+
+    const { images: { jpg: { image_url }}, title, title_english, 
+        title_japanese, type, episodes, 
+        status, airing, rating, 
+        synopsis, background, season, 
+        producers, studios, genres, themes } = jikan;
+
+
+
     return (
-        <div className="temporary">
-            <p>IMAGE</p>
-            <p>TITLE</p>
-            <p>TITLE IN ENGLISH</p>
-            <p>TITLE IN JAPANESE</p>
-            <p>TYPE</p>
-            <p>EPISODES</p>
-            <p>STATUS</p>
-            <p>AIRING</p>
-            <p>RATING</p>
-            <p>SYNOPSIS</p>
-            <p>BACKGROUND</p>
-            <p>SEASON</p>
-            <p>PRODUCERS</p>
-            <p>STUDIOS</p>
-            <p>GENRES</p>
-            <p>THEMES</p>
-            <p>THEME</p>
-        </div>
+        <li className="temporary">
+            <img src={image_url}></img>
+            <h4>{title}</h4>
+            <h3>{title_japanese}</h3>
+            <p>{synopsis}</p>
+        
+        </li>
     );
 };
 

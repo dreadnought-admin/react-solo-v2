@@ -48,7 +48,7 @@ const HomeContainer = () => {
 
     return ( 
         <div className="temporary">
-            <JikanHome jikanData={jikanData}/>
+            <JikanHome jikanData={jikanData} setJikan={setJikanData}/>
             <WaifuHome waifuData={waifuData} />
         </div>
     );
