@@ -17,12 +17,13 @@ const App = () => {
     return (
         <div>
             <Header 
+            key={1}
             isDarkMode={isDarkMode}
              onToggleDarkMode={onToggleDarkMode} 
              />
 
-            <Main />
-            <Footer />
+            <Main key={2}/>
+            <Footer key={3}/>
         </div>
     );
 };

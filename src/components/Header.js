@@ -1,15 +1,17 @@
 
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
-    const buttonTextContent = isDarkMode ? "Light Mode" : "Dark Mode"
+    const buttonTextContent = isDarkMode ? "Turn Off the Lights!" : "Turn On the Lights!"
 
     return (
         <header>
             <nav>
-                <div className="navigation">
+                <div className="logo">
     
                     <img className="siteLogo" src="../images/weebLogo.png"></img>
                     
-                    <a className="button" href="">
+                </div>
+                <div className="buttonBar">
+                <a className="button" href="">
                         Search Database 🔍
                     </a>
                     <a className="button" href="">

@@ -1,5 +1,6 @@
 import WaifuCard from './WaifuCard';
 
+
 const WaifuContainer = ({ waifuData }) => {
     return (
         <div className="temporary">
