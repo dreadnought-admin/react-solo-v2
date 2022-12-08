@@ -12,7 +12,7 @@ const NewJikanForm = ({ addNewJikan }) => {
         type: "",
         status: "",
         episodes: 0,
-        airing: "",
+        airing: false,
         rating: "",
         synopsis: "",
         background: "",
@@ -25,6 +25,10 @@ const NewJikanForm = ({ addNewJikan }) => {
        
         const {name, value} = e.target
         setFormData((formData) => ({...formData, [name]: value}))
+    };
+
+    const handleChecked = (e) => {
+        setFormData({...formData, [e.target.title]: e.target.checked})
     };
  
     const handleFormSubmit = (e) => {
@@ -56,7 +60,7 @@ const NewJikanForm = ({ addNewJikan }) => {
             type: "",
             status: "",
             episodes: 0,
-            airing: "",
+            airing: false,
             rating: "",
             synopsis: "",
             background: ""
@@ -105,14 +109,16 @@ const NewJikanForm = ({ addNewJikan }) => {
             />
  
  
-            <input
-            type="text"
+            <label className="label">Still Airing:</label>
+
+            <input 
+            type="radio"
             name="airing"
-            placeholder="Enter 'true' if airing, 'false' if not"
             value={formData.airing}
-            onChange={handleChange}
+            onChange={handleChecked}
             />
- 
+
+            <label className="label">No. of Episodes:</label>
             <input
             type="number"
             name="episodes"
@@ -131,6 +137,8 @@ const NewJikanForm = ({ addNewJikan }) => {
  
             <input
             type="text"
+            rows="3"
+            cols="50"
             name="synopsis"
             placeholder="Enter a synopsis"
             value={formData.synopsis}
@@ -139,6 +147,8 @@ const NewJikanForm = ({ addNewJikan }) => {
  
             <input
             type="text"
+            rows="3"
+            cols="50"
             name="background"
             placeholder="Enter a background"
             value={formData.background}

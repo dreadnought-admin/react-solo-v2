@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, useLocation } from "react-router-dom";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";

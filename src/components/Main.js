@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Router, Link } from 'react-router-dom'
+import axios from 'axios';
 import JikanList from  './JikanList';
 import NewJikanForm from './NewJikanForm';
 import WaifuContainer from './WaifuContainer';
@@ -32,6 +33,9 @@ const Main = () => {
       fetchData();
     }, [])
 
+    console.log({jikanData})
+    console.log({waifuData})
+
     const [search, setSearch] = useState("")
     const resultingJikanToDisplay = jikanData.filter(jikan => {
         return(
@@ -45,24 +49,22 @@ const Main = () => {
     console.log({waifuData})  
 
     const addNewJikan = (jikan) => {
-        fetch("http://localhost:3000/anime", {
+        fetch("http://localhost:4000/anime", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(planet)
+            body: JSON.stringify(jikan)
         });
 
         setJikanData([...jikanData, jikan])
     }
-
- 
  
     return (
         <div>
             <div className="main">
                 <div>
-                    <h1>Hey! This will be populated by some lorem ipsum</h1>
+                    <h1><em>Yōkoso</em><strong>ようこそ!</strong></h1>
                     <h3>Search through our vast collection of anime & manga</h3>
                     <p>Discover new things or revisit classic favourites</p>
                 </div>

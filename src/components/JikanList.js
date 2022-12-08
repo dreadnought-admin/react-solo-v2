@@ -1,4 +1,4 @@
-import JikanItem from './JikanItem';
+import JikanItem from './JikanCard';
  
 const JikanList = ({ jikans }) => {
     const jikanList = jikans.map((jikan) => {
