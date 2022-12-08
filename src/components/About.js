@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
@@ -12,6 +13,11 @@ const About = () => {
                     <p>Discover new things or revisit classic favourites</p>
                 </div>
                 <span>
+                    <div>
+                        <Link className="button" to="/database">
+                            View the Database!
+                        </Link>
+                    </div>
                
                     <a target="_blank" href="https://en.wikipedia.org/wiki/Anime">
                         <button className="icon">㊙️</button>

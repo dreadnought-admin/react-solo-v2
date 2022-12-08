@@ -79,9 +79,9 @@ const Main = () => {
                         <NewJikanForm addNewJikan={addNewJikan}/>
                     </Route>
 
-                    <Route path="/database/:title">
-                        <JikanDetail />
-                    </Route>
+                    {/*<Route path="/database/:id">
+                        <JikanDetail jikans={jikanData} />
+                    </Route>*/}
 
                     <Route path="/waifu">
                         <WaifuContainer waifus={waifuData} setWaifus={setWaifuData}/>

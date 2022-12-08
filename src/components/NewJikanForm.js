@@ -6,6 +6,7 @@ const NewJikanForm = ({ addNewJikan }) => {
  
     const startValues = {
         
+        id: "",
         image_url: "",
         images: {
             jpg: { image_url: "" }},
@@ -53,7 +54,7 @@ const NewJikanForm = ({ addNewJikan }) => {
         addNewJikan(anime)
         setFormData({
 
-            
+            id: uuid(),
             image_url: "",
             images: {
                 jpg:
