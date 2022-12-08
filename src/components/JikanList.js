@@ -1,16 +1,15 @@
 import JikanItem from './JikanItem';
-
-const JikanList = ({ setJikan, setSearchQuery }) => {
-
+ 
+const JikanList = ({ jikans }) => {
+    const jikanList = jikans.map((jikan) => {
+        return <JikanItem key={jikan.id} jikan={jikan} />
+    })
+ 
     return (
        <ul className="jikans">
-        {setSearchQuery.map(jikan => (
-            <JikanItem 
-            jikan={jikan}
-            setJikan={setJikan} />
-        ))}
+        {jikanList}
        </ul>
     );
 };
-
+ 
 export default JikanList;

@@ -1,12 +1,10 @@
-import WaifuCard from './WaifuCard';
 
-
-const WaifuContainer = ({ waifuData }) => {
+const WaifuContainer = ({ waifus }) => {
     return (
         <div className="temporary">
-            <WaifuCard waifu={waifuData} />
+            <WaifuCard waifu={waifus} />
         </div>
     );
 };
-
+ 
 export default WaifuContainer;

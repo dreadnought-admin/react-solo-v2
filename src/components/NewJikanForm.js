@@ -1,32 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios';
-
-
-const NewSubmission = () => {
-
-    const [jikanData, setJikanData] = useState([]);
-
-    useEffect (() => {
-        fetch("http://localhost:3000/anime")
-        .then((r) => r.json())
-        .then(data => setJikanData(data))
-    }, [])
-    
-        
-        console.log({jikanData})
-        
-        const submitNewAnime = newAnime => {
-            const newAnimeCollection = [...jikanData, newAnime];
-            setJikanData(newAnimeCollection)
-        }
-
-
+import React, { useState } from 'react'
+ 
+ 
+const NewJikanForm = ({ addNewJikan }) => {
+ 
     const startValues = {
-
+ 
         images: {
             jpg: { image_url: "" }},
         title: "",
-        title_japanese: "", 
+        title_japanese: "",
         type: "",
         status: "",
         episodes: 0,
@@ -34,22 +16,22 @@ const NewSubmission = () => {
         rating: "",
         synopsis: "",
         background: "",
-
+ 
     };
-
+ 
     const [formData, setFormData] = useState(startValues);
-
+ 
     const handleChange = (e) => {
-        
+       
         const {name, value} = e.target
         setFormData((formData) => ({...formData, [name]: value}))
     };
-
+ 
     const handleFormSubmit = (e) => {
         e.preventDefault();
         formData.images.jpg.image_url=formData.image_url
         alert("New anime added! ありがとうございました (Thank you)! 🧧")
-
+ 
         const configObj = {
             method: "POST",
             headers: {
@@ -58,19 +40,19 @@ const NewSubmission = () => {
             },
             body: JSON.stringify({ ...formData })
         };
-
+ 
     fetch('http://localhost:3000/anime', configObj)
     .then((r) => r.json())
     .then((anime) => {
-        submitNewAnime(anime)
+        addNewJikan(anime)
         setFormData({
             image_url: "",
             images: {
-                jpg: 
+                jpg:
                 { image_url: "" }
             },
             title: "",
-            title_japanese: "", 
+            title_japanese: "",
             type: "",
             status: "",
             episodes: 0,
@@ -78,26 +60,26 @@ const NewSubmission = () => {
             rating: "",
             synopsis: "",
             background: ""
-    
+   
         });
     });
 }
-
-
+ 
+ 
   return (
     <div>
         <h2>Add to the Database!</h2>
         <form autoComplete="off" onSubmit={handleFormSubmit}>
-
+ 
             <input
             type="text"
             name="image_url"
             placeholder="Enter an image url"
             value={formData.image_url}
             onChange={handleChange}
-    
+   
             />
-
+ 
             <input
             type="text"
             name="title"
@@ -105,7 +87,7 @@ const NewSubmission = () => {
             value={formData.title}
             onChange={handleChange}
             />
-
+ 
             <input
             type="text"
             name="title_japanese"
@@ -113,7 +95,7 @@ const NewSubmission = () => {
             value={formData.title_japanese}
             onChange={handleChange}
             />
-
+ 
             <input
             type="text"
             name="type"
@@ -121,8 +103,8 @@ const NewSubmission = () => {
             value={formData.type}
             onChange={handleChange}
             />
-
-
+ 
+ 
             <input
             type="text"
             name="airing"
@@ -130,15 +112,15 @@ const NewSubmission = () => {
             value={formData.airing}
             onChange={handleChange}
             />
-
+ 
             <input
             type="number"
             name="episodes"
             value={formData.episodes}
             onChange={handleChange}
             />
-
-
+ 
+ 
             <input
             type="text"
             name="rating"
@@ -146,7 +128,7 @@ const NewSubmission = () => {
             value={formData.rating}
             onChange={handleChange}
             />
-
+ 
             <input
             type="text"
             name="synopsis"
@@ -154,7 +136,7 @@ const NewSubmission = () => {
             value={formData.synopsis}
             onChange={handleChange}
             />
-
+ 
             <input
             type="text"
             name="background"
@@ -162,14 +144,12 @@ const NewSubmission = () => {
             value={formData.background}
             onChange={handleChange}
             />
-
+ 
             <button type="button" onClick={handleFormSubmit}>Submit!</button>
-
+ 
         </form>
     </div>
   );
 }
-
-export default NewSubmission
-
-
+ 
+export default NewJikanForm;

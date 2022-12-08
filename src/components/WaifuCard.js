@@ -1,23 +1,21 @@
-import axios from 'axios';
-import { useState } from 'react';
-
+ 
 const WaifuCard = ({ waifu }) => {
-
+ 
     const { url } = waifu
-
+ 
     const handleKawaii = () => {
         console.log("uwu! what's this?")
     }
-
+ 
     const handleGenerate = async(e) => {
         console.log("owo?")
         window.location.reload();
     }
-
+ 
     const handleTouch = () => {
         alert("o-onii-san! (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")
     }
-
+ 
     return (
         <div className="temporary">
             <div>
@@ -30,11 +28,11 @@ const WaifuCard = ({ waifu }) => {
                     Kawaii! `(´｡• ᵕ •｡`) ♡`
                 </button>
                 <button className="generate" onClick={handleGenerate}>
-                    <em>*slams fist against table*</em> Bring Me Another! 
+                    <em>*slams fist against table*</em> Bring Me Another!
                 </button>
             </div>
         </div>
     );
 };
-
+ 
 export default WaifuCard;
