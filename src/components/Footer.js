@@ -1,15 +1,16 @@
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer>
             <nav>
                 <div className="navigation">
-                    <a className="button" href="https://jikan.moe/">
+                    <NavLink className="button" to="https://jikan.moe/">
                         Jikan API
-                    </a>
-                    <a className="button" href="https://www.waifu.im/">
+                    </NavLink>
+                    <NavLink className="button" to="https://www.waifu.im/">
                         WAIFU.IM
-                    </a>
+                    </NavLink>
                 </div>
             </nav>
         </footer>

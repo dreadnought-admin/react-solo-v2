@@ -1,7 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 
 
-const NewSubmission = ({ submitNewAnime }) => {
+const NewSubmission = () => {
+
+    const [jikanData, setJikanData] = useState([]);
+
+    useEffect (() => {
+        fetch("http://localhost:3000/anime")
+        .then((r) => r.json())
+        .then(data => setJikanData(data))
+    }, [])
+    
+        
+        console.log({jikanData})
+        
+        const submitNewAnime = newAnime => {
+            const newAnimeCollection = [...jikanData, newAnime];
+            setJikanData(newAnimeCollection)
+        }
+
 
     const startValues = {
 

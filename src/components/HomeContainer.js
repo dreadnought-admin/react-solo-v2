@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useState, useEffect } from 'react'; 
 
 import JikanHome from './JikanHome';
-import WaifuHome from './WaifuHome';
 
 
 const HomeContainer = () => {
@@ -49,7 +48,7 @@ const HomeContainer = () => {
     return ( 
         <div className="temporary">
             <JikanHome jikanData={jikanData} setJikan={setJikanData}/>
-            <WaifuHome waifuData={waifuData} />
+            {/*<WaifuHome waifuData={waifuData} />*/}
         </div>
     );
 };

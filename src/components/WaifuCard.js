@@ -1,3 +1,5 @@
+import axios from 'axios';
+import { useState } from 'react';
 
 const WaifuCard = ({ waifu }) => {
 
@@ -7,8 +9,13 @@ const WaifuCard = ({ waifu }) => {
         console.log("uwu! what's this?")
     }
 
-    const handleGenerate = () => {
-        console.log("o-onii-san!")
+    const handleGenerate = async(e) => {
+        console.log("owo?")
+        window.location.reload();
+    }
+
+    const handleTouch = () => {
+        alert("o-onii-san! (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")
     }
 
     return (
@@ -17,13 +24,13 @@ const WaifuCard = ({ waifu }) => {
                 <h1>Presenting...</h1>
                 <h2><em>Your Waifu!</em></h2>
             </div>
-            <img className="tempImg" src={url}></img>
+            <img className="tempImg" src={url} onClick={handleTouch}></img>
             <div>
                 <button className="kawaii" onClick={handleKawaii}>
-                    Kawaii!
+                    Kawaii! `(´｡• ᵕ •｡`) ♡`
                 </button>
                 <button className="generate" onClick={handleGenerate}>
-                    <em>*slams fist against table*</em> Bring Me Another!
+                    <em>*slams fist against table*</em> Bring Me Another! 
                 </button>
             </div>
         </div>

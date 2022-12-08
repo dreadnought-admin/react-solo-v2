@@ -5,11 +5,6 @@ import NewSubmission from './NewSubmission';
 
 const JikanHome = ({ jikanData, setJikan }) => {
 
-    const submitNewAnime = newAnime => {
-        const newAnimeCollection = [...jikanData, newAnime];
-        setJikan(newAnimeCollection)
-    }
-
     const [searchQuery, setSearchQuery] = useState("");
 
     const searchResults = jikanData.filter((jikan) => {
@@ -31,12 +26,6 @@ const JikanHome = ({ jikanData, setJikan }) => {
                 jikan={jikanData} 
                 setJikan={setJikan}
                 setSearchQuery={searchResults}
-                />
-            </div>
-
-            <div>
-                <NewSubmission 
-                submitNewAnime={submitNewAnime}
                 />
             </div>
 

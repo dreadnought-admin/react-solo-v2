@@ -1,8 +1,7 @@
-import { Router, Link } from 'react-router-dom'
-import HomeContainer from "./HomeContainer";
+import { Link } from 'react-router-dom';
 
 const Main = () => {
-
+  
 
     return (
         <div>
@@ -29,9 +28,6 @@ const Main = () => {
                     <h3><em>"Anime was a mistake. It's nothing but trash."</em></h3>
                     <p> — Hayao Miyazaki</p>
                 </div>
-            </div>
-            <div className="temporary">
-                <HomeContainer />
             </div>
         </div>
     );
