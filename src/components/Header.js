@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
     const buttonTextContent = isDarkMode ? "Turn Off the Lights!" : "Turn On the Lights!"
 
@@ -10,15 +12,18 @@ const Header = ({ isDarkMode, onToggleDarkMode }) => {
                     
                 </div>
                 <div className="buttonBar">
-                <a className="button" href="">
+                <NavLink className="button" to="/">
+                    Home 👹
+                </NavLink>
+                <NavLink className="button" to="/database">
                         Search Database 🔍
-                    </a>
-                    <a className="button" href="">
+                    </NavLink>
+                    <NavLink className="button" to="/database/new">
                         Add to Database 🖉
-                    </a>
-                    <a className="button" href="">
+                    </NavLink>
+                    <NavLink className="button" to="/waifu">
                         Waifu Generator 💖
-                    </a>
+                    </NavLink>
                     <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
                 </div>
             </nav>

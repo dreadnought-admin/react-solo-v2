@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import uuid from 'react-uuid';
  
  
 const NewJikanForm = ({ addNewJikan }) => {
  
     const startValues = {
- 
+        
+        image_url: "",
         images: {
             jpg: { image_url: "" }},
         title: "",
@@ -45,11 +47,13 @@ const NewJikanForm = ({ addNewJikan }) => {
             body: JSON.stringify({ ...formData })
         };
  
-    fetch('http://localhost:3000/anime', configObj)
+    fetch(`http://localhost:3000/anime/`, configObj)
     .then((r) => r.json())
     .then((anime) => {
         addNewJikan(anime)
         setFormData({
+
+            
             image_url: "",
             images: {
                 jpg:

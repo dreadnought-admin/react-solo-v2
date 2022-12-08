@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Router, Link } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import axios from 'axios';
+import About from './About';
 import JikanList from  './JikanList';
 import NewJikanForm from './NewJikanForm';
 import WaifuContainer from './WaifuContainer';
 import Search from './Search';
+import JikanDetail from './JikanDetail';
  
 const Main = () => {
 
@@ -62,35 +64,29 @@ const Main = () => {
  
     return (
         <div>
-            <div className="main">
-                <div>
-                    <h1><em>Yōkoso</em><strong>ようこそ!</strong></h1>
-                    <h3>Search through our vast collection of anime & manga</h3>
-                    <p>Discover new things or revisit classic favourites</p>
-                </div>
-                <span>
-               
-                    <a target="_blank" href="https://en.wikipedia.org/wiki/Anime">
-                        <button className="icon">㊙️</button>
-                    </a>
-                    <a target="_blank" href="https://www.japan.travel/en/us/">
-                        <button className="icon">🗾</button>
-                    </a>
-                    <a target="_blank" href="https://animerecipes.tumblr.com/">
-                        <button className="icon">🍥</button>
-                    </a>
-               
-                </span>
-                <div>
-                    <h3><em>"Anime was a mistake. It's nothing but trash."</em></h3>
-                    <p> — Hayao Miyazaki</p>
-                </div>
-            </div>
             <div className="temporary">
-                <Search search={search} setSearch={setSearch}/>
-                <JikanList jikans={resultingJikanToDisplay}/>
-                <NewJikanForm addNewJikan={addNewJikan}/>
-                <WaifuContainer waifus={waifuData} setWaifus={setWaifuData}/>
+                <Switch>
+                    <Route exact path="/">
+                        <About />
+                    </Route>
+                    
+                    <Route exact path="/database">
+                        <Search search={search} setSearch={setSearch}/>
+                        <JikanList jikans={resultingJikanToDisplay}/>
+                    </Route>
+
+                    <Route path="/database/new">
+                        <NewJikanForm addNewJikan={addNewJikan}/>
+                    </Route>
+
+                    <Route path="/database/:title">
+                        <JikanDetail />
+                    </Route>
+
+                    <Route path="/waifu">
+                        <WaifuContainer waifus={waifuData} setWaifus={setWaifuData}/>
+                    </Route>
+                </Switch>
             </div>
         </div>
     );

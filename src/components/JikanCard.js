@@ -1,3 +1,4 @@
+
 const JikanItem = ({ jikan }) => {
  
     const { images: { jpg: { image_url }}, title,

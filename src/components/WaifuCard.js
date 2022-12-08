@@ -1,4 +1,6 @@
- 
+import { useState } from 'react';
+
+
 const WaifuCard = ({ waifu }) => {
  
     const { url } = waifu
@@ -15,6 +17,8 @@ const WaifuCard = ({ waifu }) => {
     const handleTouch = () => {
         alert("o-onii-san! (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")
     }
+
+   
  
     return (
         <div className="temporary">
@@ -25,7 +29,7 @@ const WaifuCard = ({ waifu }) => {
             <img className="tempImg" src={url} onClick={handleTouch}></img>
             <div>
                 <button className="kawaii" onClick={handleKawaii}>
-                    Kawaii! `(´｡• ᵕ •｡`) ♡`
+                    Kawaii! `(´｡• ᵕ •｡`) ♡` 
                 </button>
                 <button className="generate" onClick={handleGenerate}>
                     <em>*slams fist against table*</em> Bring Me Another!

@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Switch, useLocation } from "react-router-dom";
 
 import { useState } from "react";
+import { Switch, Routes } from 'react-router-dom'
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,7 +12,7 @@ const App = () => {
 
   const onToggleDarkMode = () => {
     setIsDarkMode((isDarkMode) => !isDarkMode);
-  };
+  }; 
 
     return (
         <div>
@@ -20,7 +20,6 @@ const App = () => {
             isDarkMode={isDarkMode}
              onToggleDarkMode={onToggleDarkMode} 
              />
-
             <Main />
             <Footer />
         </div>
