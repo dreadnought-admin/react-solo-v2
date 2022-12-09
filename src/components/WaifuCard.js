@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 
 const WaifuCard = ({ waifu, isKawaii, onToggleKawaii }) => {
 
@@ -22,7 +20,6 @@ const WaifuCard = ({ waifu, isKawaii, onToggleKawaii }) => {
     }
 
    
- 
     return (
         <div className="presentWaifu">
             <div className="waifuText">

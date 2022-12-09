@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import axios from 'axios';
 import About from './About';
 import JikanList from  './JikanList';
 import NewJikanForm from './NewJikanForm';
 import WaifuContainer from './WaifuContainer';
 import Search from './Search';
-import JikanDetail from './JikanDetail';
  
 const Main = () => {
 
@@ -79,9 +78,6 @@ const Main = () => {
                         <NewJikanForm addNewJikan={addNewJikan}/>
                     </Route>
 
-                    {/*<Route path="/database/:id">
-                        <JikanDetail jikans={jikanData} />
-                    </Route>*/}
 
                     <Route path="/waifu">
                         <WaifuContainer waifus={waifuData} setWaifus={setWaifuData}/>

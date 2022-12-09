@@ -10,7 +10,7 @@ const WaifuContainer = ({ waifus }) => {
       }; 
     
     return (
-        <div className="temporary">
+        <div className="waifuContainer">
             <WaifuCard waifu={waifus} isKawaii={isKawaii} onToggleKawaii={onToggleKawaii}/>
         </div>
     );

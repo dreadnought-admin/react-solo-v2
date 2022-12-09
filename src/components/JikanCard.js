@@ -1,5 +1,4 @@
 
-
 const JikanItem = ({ jikan }) => {
  
     const { images: { jpg: { image_url }}, trailer: { youtube_id }, title,
