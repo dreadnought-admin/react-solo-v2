@@ -169,11 +169,11 @@ const NewJikanForm = ({ addNewJikan }) => {
                     type="text"
                     name="youtube_id"
                     placeholder="Enter a YouTube Id Here"
-                    value={formData.trailer.youtube_id}
+                    value={formData.youtube_id}
                     onChange={handleChange}
                     />
-                    
-                </li>
+                </li>   
+                
 
                 <li>
                     <label className="label">Rating: </label>
