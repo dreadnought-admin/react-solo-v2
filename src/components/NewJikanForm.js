@@ -200,7 +200,7 @@ const NewJikanForm = ({ addNewJikan }) => {
                     />
                 </li>
                 <li>
-                    <label className="label">Anime Type: </label>
+                    <label className="label">Background: </label>
                     <input
                     className="formInput"
                     type="text"
