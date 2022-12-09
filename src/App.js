@@ -11,17 +11,17 @@ const App = () => {
 
   // styled-components
 
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isSakura, setIsSakuraMode] = useState(true);
 
-  const onToggleDarkMode = () => {
-    setIsDarkMode((isDarkMode) => !isDarkMode);
+  const onToggleSakuraMode = () => {
+    setIsSakuraMode((isSakura) => !isSakura);
   }; 
 
     return (
-        <div className={isDarkMode ? "AppDark" : "AppLight"}>
+        <div className={isSakura ? "AppDark" : "AppLight"}>
             <Header 
-            isDarkMode={isDarkMode}
-             onToggleDarkMode={onToggleDarkMode} 
+            isSakura={isSakura}
+             onToggleSakuraMode={onToggleSakuraMode} 
              />
             <Main />
             <Footer />

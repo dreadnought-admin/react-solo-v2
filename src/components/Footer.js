@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="footerContainer">
             <nav>
-                <div className="navigation">
+                <div className="footerNav">
                     <a target="_blank" className="navButton" href="https://jikan.moe/">
                         Jikan API
                     </a>
