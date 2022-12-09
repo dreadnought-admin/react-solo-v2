@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 
 const JikanItem = ({ jikan }) => {
  
@@ -7,11 +7,6 @@ const JikanItem = ({ jikan }) => {
         status, airing, rating,
         synopsis, background
         } = jikan;
-
-    const handleClick = (e) => {
-        alert({synopsis}, {background});
-    }
- 
  
     return (
  

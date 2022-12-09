@@ -1,12 +1,15 @@
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+
 
 import { useState } from "react";
-import { Switch, Routes } from 'react-router-dom'
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 
 const App = () => {
+
+  // styled-components
 
   const [isDarkMode, setIsDarkMode] = useState(true);
 

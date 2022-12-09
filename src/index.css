@@ -1,16 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color:antiquewhite;
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Libre+Barcode+39+Text&family=Press+Start+2P&family=VT323&family=Vampiro+One&display=swap');
+
+/* Global Styles */
+
+:root {
+  --black: #171219;
+  --manga-white: #f2fbeb;
+  --brown: #65471e;
+  --light-red: #b57075;
+  --medium-orange: #dcab80;
+  --light-orange: #f8d8ab;
+  --medium-red: #b8aaaa;
+  --ford-white: #fff5f5;
+  --pink: #fca5c2;
+  --bright-red: #ec4646;
+  --orange: #ffa322;
+  --yellow-green: #f9fa93;
+  --green: #7bc188;
+  --light-blue: #8ed3f8;
+  --navy-blue: #5989a3;
+  --violet: #d793fa;
+  --lavender: #74518e;
+  --dark-purple: #1d173c;
+
+  --color: var(--black);
+  --background: var(--manga-white);
+  --primary: var(--pink);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* font-family: 'Cute Font', cursive;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-family: 'Press Start 2P', cursive;
+  font-family: 'Vampiro One', cursive;
+  font-family: 'VT323', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+
+body {
+  background: url('..//public/images/cherryblossom.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'VT323', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  text-shadow: 1px 1px var(--ford-white);
+  color: var(--light-blue);
+}
+
+.button {
+  color: var(--pink);
+  text-shadow: 1px 1px var(--black);
+  font-size: 35px;
 }
 
 .tempImg {
