@@ -5,23 +5,23 @@ const Header = ({ isDarkMode, onToggleDarkMode }) => {
 
     return (
         <header>
-            <nav>
-                <div className="logo">
+            <nav className="navigation">
+                <div className="logoContainer">
     
                     <img className="siteLogo" src="../images/weebLogo.png"></img>
                     
                 </div>
                 <div className="buttonBar">
-                <NavLink className="button" to="/">
+                <NavLink className="navButton" to="/">
                     Home 👹
                 </NavLink>
-                <NavLink className="button" to="/database">
+                <NavLink className="navButton" to="/database">
                         Search Database 🔍
                     </NavLink>
-                    <NavLink className="button" to="/database/new">
+                    <NavLink className="navButton" to="/database/new">
                         Add to Database 🖉
                     </NavLink>
-                    <NavLink className="button" to="/waifu">
+                    <NavLink className="navButton" to="/waifu">
                         Waifu Generator 💖
                     </NavLink>
                     <button onClick={onToggleDarkMode}>{buttonTextContent}</button>

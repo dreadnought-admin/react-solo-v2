@@ -42,6 +42,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
+  max-width: 1225px;
+  display: grid;
   font-family: 'VT323', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,12 +52,76 @@ body {
 h1 {
   text-shadow: 1px 1px var(--ford-white);
   color: var(--light-blue);
+  font-size: 50px;
 }
 
-.button {
-  color: var(--pink);
+h2 {
   text-shadow: 1px 1px var(--black);
-  font-size: 35px;
+  color: var(--manga-white);
+  font-size: 30px;
+}
+
+h3 {
+  text-shadow: 1px 1px var(--black);
+  color: var(--manga-white);
+  font-size: 25px;
+}
+
+p {
+  font-size: 22px;
+  color: var(--medium-orange);
+  text-shadow: 1px 1px var(--black);
+}
+
+.buttonBar {
+  margin: 0 auto;
+  margin-left: 100px;
+}
+
+.navButton {
+  color: var(--pink);
+  text-shadow: 1px 2px var(--black);
+  font-size: 33px;
+  text-decoration: none;
+  padding-left: 3px;
+  padding-right: 10px;
+}
+
+.aboutContainer {
+  margin: 0 auto;
+  margin-left: 100px;
+  text-align: center;
+}
+
+.viewButton {
+  color: var(--bright-red);
+  text-shadow: 1px 1px var(--ford-white);
+  margin: 0 auto;
+  margin-left: 545px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+
+}
+
+.iconContainer {
+  margin: 0 auto;
+  margin-left: 450px;
+  padding-top: 20px;
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  padding-left: 3px;
+  padding-right: 100px;
+  text-decoration: none;
+  text-shadow: 1px 1px var(--black);
+}
+
+.footerContainer {
+  grid-area: footer;
 }
 
 .tempImg {
