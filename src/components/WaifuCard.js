@@ -1,12 +1,15 @@
 import { useState } from 'react';
 
 
-const WaifuCard = ({ waifu }) => {
+const WaifuCard = ({ waifu, isKawaii, onToggleKawaii }) => {
+
+    const buttonText = isKawaii ? "Kawaii! `(´｡• ᵕ •｡`) ♡`" : "T-Thank you s-senpai! (*´∀`*)";
  
     const { url } = waifu
  
     const handleKawaii = () => {
         console.log("uwu! what's this?")
+        onToggleKawaii();
     }
  
     const handleGenerate = async(e) => {
@@ -21,18 +24,20 @@ const WaifuCard = ({ waifu }) => {
    
  
     return (
-        <div className="temporary">
-            <div>
+        <div className="presentWaifu">
+            <div className="waifuText">
                 <h1>Presenting...</h1>
                 <h2><em>Your Waifu!</em></h2>
             </div>
-            <img className="tempImg" src={url} onClick={handleTouch}></img>
-            <div>
+            <img className="waifu" src={url} onClick={handleTouch}></img>
+            <div className="kawaiiContainer">
                 <button className="kawaii" onClick={handleKawaii}>
-                    Kawaii! `(´｡• ᵕ •｡`) ♡` 
+                    {buttonText}
                 </button>
-                <button className="generate" onClick={handleGenerate}>
-                    <em>*slams fist against table*</em> Bring Me Another!
+            </div>
+            <div className="generateContainer">
+                <button className="kawaii" onClick={handleGenerate}>
+                    Bring Me Another! ヾ( ･`⌓´･)ﾉﾞ💢💢💢
                 </button>
             </div>
         </div>

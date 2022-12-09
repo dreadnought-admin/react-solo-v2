@@ -8,6 +8,10 @@ const NewJikanForm = ({ addNewJikan }) => {
         
         id: "",
         image_url: "",
+        youtube_id: "",
+        trailer: {
+            youtube_id: ""
+        },
         images: {
             jpg: { image_url: "" }},
         title: "",
@@ -37,6 +41,7 @@ const NewJikanForm = ({ addNewJikan }) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         formData.images.jpg.image_url=formData.image_url
+        formData.trailer.youtube_id=formData.youtube_id
         alert("New anime added! ありがとうございました (Thank you)! 🧧")
  
         const configObj = {
@@ -48,7 +53,7 @@ const NewJikanForm = ({ addNewJikan }) => {
             body: JSON.stringify({ ...formData })
         };
  
-    fetch(`http://localhost:3000/anime/`, configObj)
+    fetch(`http://localhost:4000/anime/`, configObj)
     .then((r) => r.json())
     .then((anime) => {
         addNewJikan(anime)
@@ -56,6 +61,10 @@ const NewJikanForm = ({ addNewJikan }) => {
 
             id: uuid(),
             image_url: "",
+            youtube_id: "",
+            trailer: {
+                youtube_id: ""
+            },
             images: {
                 jpg:
                 { image_url: "" }
@@ -128,6 +137,15 @@ const NewJikanForm = ({ addNewJikan }) => {
             type="number"
             name="episodes"
             value={formData.episodes}
+            onChange={handleChange}
+            />
+
+            <label className="label">Enter a YouTube Id:</label>
+            <input
+            type="text"
+            name="youtube_id"
+            placeholder="Enter a YouTube Id Here"
+            value={formData.trailer.youtube_id}
             onChange={handleChange}
             />
  

@@ -5,7 +5,7 @@ const Search = ({ setSearch }) => {
  
     return (
         <div className="searchbar">
-            <label htmlFor="search">Search: </label>
+            <label class="searchLabel" htmlFor="search">Search: </label>
  
             <input
                 type="text"

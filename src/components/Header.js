@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
-    const buttonTextContent = isDarkMode ? "Turn Off the Lights!" : "Turn On the Lights!"
+    const buttonTextContent = isDarkMode ? "🔌" : "💡"
 
     return (
         <header>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Libre+Barcode+39+Text&family=Press+Start+2P&family=VT323&family=Vampiro+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Libre+Barcode+39+Text&family=Press+Start+2P&family=Space+Grotesk:wght@500&family=VT323&family=Vampiro+One&display=swap');
 
 /* Global Styles */
 
@@ -25,7 +25,9 @@
   --color: var(--black);
   --background: var(--manga-white);
   --primary: var(--pink);
+  
 }
+
 
 /* font-family: 'Cute Font', cursive;
   font-family: 'Libre Barcode 39 Text', cursive;
@@ -47,7 +49,11 @@ body {
   font-family: 'VT323', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
 }
+
+
 
 h1 {
   text-shadow: 1px 1px var(--ford-white);
@@ -67,9 +73,9 @@ h3 {
   font-size: 25px;
 }
 
-p {
+.aboutContainer > p {
   font-size: 22px;
-  color: var(--medium-orange);
+  color: var(--green);
   text-shadow: 1px 1px var(--black);
 }
 
@@ -79,12 +85,13 @@ p {
 }
 
 .navButton {
-  color: var(--pink);
+  color: var(--green);
   text-shadow: 1px 2px var(--black);
   font-size: 33px;
   text-decoration: none;
   padding-left: 3px;
   padding-right: 10px;
+  padding-bottom: 20px;
 }
 
 .aboutContainer {
@@ -95,7 +102,7 @@ p {
 
 .viewButton {
   color: var(--bright-red);
-  text-shadow: 1px 1px var(--ford-white);
+  text-shadow: 1px 1px var(--black);
   margin: 0 auto;
   margin-left: 545px;
   text-align: center;
@@ -120,8 +127,24 @@ p {
   text-shadow: 1px 1px var(--black);
 }
 
+.quote {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.quote > p {
+  font-size: 20px;
+  color: var(--dark-purple);
+  text-shadow: 1px 1px var(--light-orange);
+}
+
 .footerContainer {
-  grid-area: footer;
+  position:flex;
+  left:0;
+  bottom:0;
+  right:0;
+  padding-top: 60px;
 }
 
 .tempImg {
@@ -132,4 +155,118 @@ p {
 .siteLogo {
   max-width: 400px;
   max-height: 300px;
+}
+
+.presentWaifu {
+  margin-left: 475px; 
+}
+
+.presentWaifu > img {
+  border-style: hidden;
+  border-radius: 30px;
+}
+
+.waifuText {
+  text-align: center;
+  margin-right: 375px;
+}
+.waifu {
+  max-width: 100vh;
+  max-height: 500px;
+}
+
+.kawaiiContainer {
+  padding-top: 10px;
+  display: block;
+  margin-left: 75px;
+}
+
+.generateContainer {
+  padding-top: 25px;
+  display: block;
+  padding-left: 25px;
+}
+
+.kawaii {
+  font-family: 'Cute Font', cursive;
+  background: var(--pink);
+  font-size: 20px;
+  color: var(--manga-white);
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.searchbar {
+  padding-top: 20px;
+}
+
+.searchLabel {
+  font-size: 20px;
+  color: var(--light-red);
+  text-shadow: 1px 1px var(--lavender);
+  padding: 15px;
+  margin-left: 25px;
+}
+
+.airing {
+  font-family: 'Vampiro', cursive;
+  color: var(--dark-purple);
+  border: hidden;
+  border-radius: 5px;
+}
+
+
+
+.jiktanTitle {
+  padding-bottom: 20px;
+}
+
+.jikanStats {
+  padding-bottom: 40px;
+}
+
+.jikanImage {
+  border: hidden;
+  border-radius: 10px;
+  margin-left: 35px;
+  margin-top: 20px;
+  image-rendering: optimizeQuality;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.jikanContainer  {
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: bold;
+  font-size: 15px;
+  color: var(--dark-purple);
+  text-shadow: 5px 3px var(--white);
+  background-color:var(--ford-white);
+  opacity: 85%;
+ 
+}
+
+.statusRating {
+  margin-left: 700px;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.trailer {
+  display: inline-flex;
+  margin-left: 150px;
+  margin-top: 50px;
 }
