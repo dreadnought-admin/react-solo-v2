@@ -89,7 +89,7 @@ const NewJikanForm = ({ addNewJikan }) => {
         <div className="inputs">
         <h2>Add to the Database!</h2>
         <form className="newForm" autoComplete="off" onSubmit={handleFormSubmit}>
-        <fieldset>
+        <fieldset className="newFormField">
             <legend>
                 OwO? What's This? 
             </legend>
