@@ -63,8 +63,8 @@ const Main = () => {
     }
  
     return (
-        <div>
-            <div className="main">
+        <div className="main">
+            <div className="mainBox">
                 <Switch>
                     <Route exact path="/">
                         <About />

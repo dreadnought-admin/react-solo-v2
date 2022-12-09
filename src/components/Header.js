@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 const Header = ({ isDarkMode, onToggleDarkMode }) => {
-    const buttonTextContent = isDarkMode ? "🔌" : "💡"
+    const buttonTextContent = isDarkMode ? "🌸" : "💮"
 
     return (
         <header>
@@ -24,7 +24,7 @@ const Header = ({ isDarkMode, onToggleDarkMode }) => {
                     <NavLink className="navButton" to="/waifu">
                         Waifu Generator 💖
                     </NavLink>
-                    <button onClick={onToggleDarkMode}>{buttonTextContent}</button>
+                    <button className="cherryButton" onClick={onToggleDarkMode}>{buttonTextContent}</button>
                 </div>
             </nav>
         </header>

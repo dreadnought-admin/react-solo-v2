@@ -53,6 +53,22 @@ body {
   position: relative;
 }
 
+.AppLight {
+  background: url('../public/images/sakuragif2.gif') repeat center center fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.cherryButton {
+  background: none;
+  border: none;
+  font-size: 30px;
+}
 
 
 h1 {
@@ -144,7 +160,10 @@ h3 {
   left:0;
   bottom:0;
   right:0;
-  padding-top: 60px;
+}
+
+.navigation {
+  margin-top: 100px;
 }
 
 .tempImg {
@@ -158,7 +177,8 @@ h3 {
 }
 
 .presentWaifu {
-  margin-left: 475px; 
+  margin-left: 475px;
+  margin-bottom: 150px; 
 }
 
 .presentWaifu > img {
@@ -194,6 +214,10 @@ h3 {
   color: var(--manga-white);
   outline: 2px solid white;
   outline-offset: 2px;
+}
+
+.searchbar {
+  margin-top: 10px;
 }
 
 .searchbar input {
@@ -251,6 +275,9 @@ h3 {
   text-shadow: 5px 3px var(--white);
   background-color:var(--ford-white);
   opacity: 85%;
+  margin-bottom: 10px;
+  border: hidden;
+  border-radius: 5px;
  
 }
 
