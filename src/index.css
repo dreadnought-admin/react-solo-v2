@@ -140,7 +140,7 @@ h3 {
 }
 
 .footerContainer {
-  position:flex;
+  position: absolute;
   left:0;
   bottom:0;
   right:0;
@@ -196,8 +196,15 @@ h3 {
   outline-offset: 2px;
 }
 
-.searchbar {
-  padding-top: 20px;
+.searchbar input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  border: hidden;
+  border-radius: 10px;
+  font-family: 'Cute Font', cursive;
+  font-size: 20px;
+ 
 }
 
 .searchLabel {
@@ -206,6 +213,7 @@ h3 {
   text-shadow: 1px 1px var(--lavender);
   padding: 15px;
   margin-left: 25px;
+
 }
 
 .airing {
@@ -269,4 +277,73 @@ h3 {
   display: inline-flex;
   margin-left: 150px;
   margin-top: 50px;
+}
+
+.formInput {
+  font-family: 'Cute Font', cursive;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+
+
+.formImage {
+  max-width: 100vh;
+  max-height: 100vh;
+  border: hidden;
+  border-radius: 30px;
+}
+
+.formContainer {
+  width: 100px;
+  background: transparent;
+  margin-left: 30px;
+  position: relative;
+  height: 1000px;
+}
+
+.inputs {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background: transparent;
+}
+
+.formImageContainer {
+  position: absolute;
+  margin-left: 700px;
+  top: 0;
+  margin-top: 100px;
+  margin-bottom: 500px;
+  float: right;
+  width: 200px;
+  height: 300px; 
+  background: transparent;
+}
+
+.clear {
+  clear: both;
+}
+
+.main {
+  position: relative;
+}
+
+.button {
+  background: var(--lavender); 
+  font-family: 'Cute Font', cursive;
+  color: var(--manga-white);
+  font-size: 20px;
+  border-radius: 3px;
+  margin-left: 275px;
+  margin-top: 10px;
+}
+
+.inputList {
+  list-style: none;
+}
+
+.label {
+  color: var(--black);
+  font-size: 20px;
 }

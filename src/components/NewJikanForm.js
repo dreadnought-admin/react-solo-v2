@@ -85,102 +85,145 @@ const NewJikanForm = ({ addNewJikan }) => {
  
  
   return (
-    <div>
+    <div className="formContainer">
+        <div className="inputs">
         <h2>Add to the Database!</h2>
-        <form autoComplete="off" onSubmit={handleFormSubmit}>
- 
-            <input
-            type="text"
-            name="image_url"
-            placeholder="Enter an image url"
-            value={formData.image_url}
-            onChange={handleChange}
-   
-            />
- 
-            <input
-            type="text"
-            name="title"
-            placeholder="Enter a title"
-            value={formData.title}
-            onChange={handleChange}
-            />
- 
-            <input
-            type="text"
-            name="title_japanese"
-            placeholder="Enter a Japanese title"
-            value={formData.title_japanese}
-            onChange={handleChange}
-            />
- 
-            <input
-            type="text"
-            name="type"
-            placeholder="Enter your anime type (TV, Movie, etc.)"
-            value={formData.type}
-            onChange={handleChange}
-            />
- 
- 
-            <label className="label">Still Airing:</label>
+        <form className="newForm" autoComplete="off" onSubmit={handleFormSubmit}>
+        <fieldset>
+            <legend>
+                OwO? What's This? 
+            </legend>
+            <h2>
+                Submit a New Anime!
+            </h2>
+            <ul className="inputList">
+                <li>
+                    <label className="label">Image URL: </label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    name="image_url"
+                    placeholder="Enter an image url"
+                    value={formData.image_url}
+                    onChange={handleChange}
+                    />
+                </li>
+                <li>
+                    <label className="label">Title: </label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    name="title"
+                    placeholder="Enter a title"
+                    value={formData.title}
+                    onChange={handleChange}
+                    />
+                </li>
+                <li>
+                    <label className="label">Japanese Title: </label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    name="title_japanese"
+                    placeholder="Enter a Japanese title"
+                    value={formData.title_japanese}
+                    onChange={handleChange}
+                    />
+                </li>
+                <li>
+                    <label className="label">Anime Type:</label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    name="type"
+                    placeholder="Enter your anime type (TV, Movie, etc.)"
+                    value={formData.type}
+                    onChange={handleChange}
+                    />
+                </li>
+    
+                <li>
+                    <label className="label">Still Airing (Mark if Yes):</label>
+                    <input 
+                    className="formInput"
+                    type="radio"
+                    name="airing"
+                    value={formData.airing}
+                    onChange={handleChecked}
+                    />
+                </li>
+                <li>
+                    <label className="label">No. of Episodes:</label>
+                    <input
+                    className="formInput"
+                    type="number"
+                    name="episodes"
+                    value={formData.episodes}
+                    onChange={handleChange}
+                    />
+                </li>
+                <li>
+                    <label className="label">Enter a YouTube Id:</label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    name="youtube_id"
+                    placeholder="Enter a YouTube Id Here"
+                    value={formData.trailer.youtube_id}
+                    onChange={handleChange}
+                    />
+                    
+                </li>
 
-            <input 
-            type="radio"
-            name="airing"
-            value={formData.airing}
-            onChange={handleChecked}
-            />
-
-            <label className="label">No. of Episodes:</label>
-            <input
-            type="number"
-            name="episodes"
-            value={formData.episodes}
-            onChange={handleChange}
-            />
-
-            <label className="label">Enter a YouTube Id:</label>
-            <input
-            type="text"
-            name="youtube_id"
-            placeholder="Enter a YouTube Id Here"
-            value={formData.trailer.youtube_id}
-            onChange={handleChange}
-            />
- 
- 
-            <input
-            type="text"
-            name="rating"
-            placeholder="Rating (G, PG, R, etc.)"
-            value={formData.rating}
-            onChange={handleChange}
-            />
- 
-            <input
-            type="text"
-            rows="3"
-            cols="50"
-            name="synopsis"
-            placeholder="Enter a synopsis"
-            value={formData.synopsis}
-            onChange={handleChange}
-            />
- 
-            <input
-            type="text"
-            rows="3"
-            cols="50"
-            name="background"
-            placeholder="Enter a background"
-            value={formData.background}
-            onChange={handleChange}
-            />
- 
-            <button type="button" onClick={handleFormSubmit}>Submit!</button>
+                <li>
+                    <label className="label">Rating: </label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    name="rating"
+                    placeholder="Rating (G, PG, R, etc.)"
+                    value={formData.rating}
+                    onChange={handleChange}
+                    />
+                </li>
+                <li>
+                    <label className="label">Synopsis: </label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    rows="3"
+                    cols="50"
+                    name="synopsis"
+                    placeholder="Enter a synopsis"
+                    value={formData.synopsis}
+                    onChange={handleChange}
+                    />
+                </li>
+                <li>
+                    <label className="label">Anime Type: </label>
+                    <input
+                    className="formInput"
+                    type="text"
+                    rows="3"
+                    cols="50"
+                    name="background"
+                    placeholder="Enter a background"
+                    value={formData.background}
+                    onChange={handleChange}
+                    />
+                </li>
+            </ul>
+        </fieldset>
+            <button className= "button" type="button" onClick={handleFormSubmit}>Submit! ʕ •ᴥ• ʔ</button>
  
         </form>
+        </div>
+        <div className="formImageContainer">
+            <img className="formImage" src="../images/vagabond.png"></img>
+        </div>
+        <div className="clear">
+
+        </div>
     </div>
   );
 }

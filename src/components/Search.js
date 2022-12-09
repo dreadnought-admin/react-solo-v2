@@ -8,9 +8,10 @@ const Search = ({ setSearch }) => {
             <label class="searchLabel" htmlFor="search">Search: </label>
  
             <input
+                class="queryBox"
                 type="text"
                 id="search"
-                placeholder="Enter an anime or manga!"
+                placeholder="Search for..."
                 onChange={handleChange}
             />
            

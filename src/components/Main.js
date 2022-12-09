@@ -64,7 +64,7 @@ const Main = () => {
  
     return (
         <div>
-            <div className="temporary">
+            <div className="main">
                 <Switch>
                     <Route exact path="/">
                         <About />
