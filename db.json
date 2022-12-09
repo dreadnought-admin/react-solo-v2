@@ -92854,6 +92854,94 @@
       "rating": "test",
       "synopsis": "test",
       "background": "test"
+    },
+    {
+      "id": 39,
+      "image_url": "https://www.animenewsnetwork.com/images/encyc/A25066-825432658.1659822888.jpg",
+      "youtube_id": "1sygUhb8Q2Y",
+      "trailer": {
+        "youtube_id": "1sygUhb8Q2Y"
+      },
+      "images": {
+        "jpg": {
+          "image_url": "https://www.animenewsnetwork.com/images/encyc/A25066-825432658.1659822888.jpg"
+        }
+      },
+      "title": "BLEACH 千年血戦篇",
+      "title_japanese": "BLEACH 千年血戦篇",
+      "type": "TV",
+      "status": "",
+      "episodes": "5",
+      "airing": false,
+      "rating": "TV-M",
+      "synopsis": "The peace is suddenly broken when warning sirens blare through the Soul Society. Residents, there are disappearing without a trace and nobody knows who's behind it. Meanwhile, a dark shadow is also extending itself toward Ichigo and his friends in Karakura Town.",
+      "background": ""
+    },
+    {
+      "id": 40,
+      "image_url": "https://www.animenewsnetwork.com/images/encyc/A25066-825432658.1659822888.jpg",
+      "youtube_id": "1sygUhb8Q2Y",
+      "trailer": {
+        "youtube_id": "1sygUhb8Q2Y"
+      },
+      "images": {
+        "jpg": {
+          "image_url": "https://assets-prd.ignimgs.com/2022/09/14/bleach-thousand-year-blood-war-button-1663170985598.jpg"
+        }
+      },
+      "title": "Bleach: Thousand Year Blood War",
+      "title_japanese": "BLEACH 千年血戦篇",
+      "type": "TV",
+      "status": "",
+      "episodes": "4",
+      "airing": false,
+      "rating": "TV-MA",
+      "synopsis": "The peace is suddenly broken when warning sirens blare through the Soul Society. Residents, there are disappearing without a trace and nobody knows who's behind it. Meanwhile, a dark shadow is also extending itself toward Ichigo and his friends in Karakura Town.",
+      "background": "There's some background to be had here"
+    },
+    {
+      "id": 41,
+      "image_url": "https://assets-prd.ignimgs.com/2022/09/14/bleach-thousand-year-blood-war-button-1663170985598.jpg",
+      "youtube_id": "1sygUhb8Q2Y",
+      "trailer": {
+        "youtube_id": "1sygUhb8Q2Y"
+      },
+      "images": {
+        "jpg": {
+          "image_url": "https://assets-prd.ignimgs.com/2022/09/14/bleach-thousand-year-blood-war-button-1663170985598.jpg"
+        }
+      },
+      "title": "BLEACH: Thousand Year Blood War",
+      "title_japanese": "BLEACH 千年血戦篇",
+      "type": "TV",
+      "status": "",
+      "episodes": "5",
+      "airing": false,
+      "rating": "TV-MA",
+      "synopsis": "The peace is suddenly broken when warning sirens blare through the Soul Society. Residents, there are disappearing without a trace and nobody knows who's behind it. Meanwhile, a dark shadow is also extending itself toward Ichigo and his friends in Karakura Town.",
+      "background": "I'm sure the background is very interesting!"
+    },
+    {
+      "id": 42,
+      "image_url": "test",
+      "youtube_id": "test",
+      "trailer": {
+        "youtube_id": "test"
+      },
+      "images": {
+        "jpg": {
+          "image_url": "test"
+        }
+      },
+      "title": "test",
+      "title_japanese": "test",
+      "type": "test",
+      "status": "",
+      "episodes": "3",
+      "airing": false,
+      "rating": "test",
+      "synopsis": "test",
+      "background": "test"
     }
   ]
 }

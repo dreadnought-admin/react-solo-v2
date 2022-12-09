@@ -306,16 +306,6 @@ h3 {
   margin-top: 50px;
 }
 
-.newFormField {
-  background: var(--manga-white);
-  opacity: 90%;
-}
-
-.newFormField h2 {
-  color: var(--black);
-  text-shadow: 1px 1px var(--manga-white);
-}
-
 .formInput {
   font-family: 'Cute Font', cursive;
   font-size: 15px;

@@ -19,7 +19,7 @@ const Header = ({ isSakura, onToggleSakuraMode }) => {
                         Search Database 🔍
                     </NavLink>
                     <NavLink className="navButton" to="/database/new">
-                        Add to Database 🖉
+                        Add to Database ✏️
                     </NavLink>
                     <NavLink className="navButton" to="/waifu">
                         Waifu Generator 💖
