@@ -92942,6 +92942,28 @@
       "rating": "test",
       "synopsis": "test",
       "background": "test"
+    },
+    {
+      "id": 43,
+      "image_url": "test",
+      "youtube_id": "test",
+      "trailer": {
+        "youtube_id": "test"
+      },
+      "images": {
+        "jpg": {
+          "image_url": "test"
+        }
+      },
+      "title": "test",
+      "title_japanese": "test",
+      "type": "test",
+      "status": "",
+      "episodes": "3",
+      "airing": false,
+      "rating": "test",
+      "synopsis": "test",
+      "background": "test"
     }
   ]
 }
